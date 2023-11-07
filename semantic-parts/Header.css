@@ -1,13 +1,16 @@
 .header-container {
   position: absolute;
   top: 0;
-  width: 100vw;
-  height: 10vh;
+  width: 15vw;
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
-  padding: 20px 30px;
-  background-color: rgba(250, 235, 215, 0.596);
+  justify-content: center;
+  flex-direction: column;
+  gap: 60px;
+  padding: 20px 10px;
+  background-color: rgba(5, 5, 5, 0.822);
   z-index: 1;
+  color: rgb(0, 173, 173);
 }
 
 .logo-container {
@@ -16,6 +19,7 @@
 
 .nav-container {
   display: flex;
+  flex-direction: column;
   width: 80vw;
   gap: 20px;
   justify-content: end;
