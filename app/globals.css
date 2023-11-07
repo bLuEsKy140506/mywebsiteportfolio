@@ -8,20 +8,57 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 255, 255, 0;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgb(88, 88, 88);
+  background-color: rgba(185, 185, 185, 0.288);
+  position: relative;
+}
+
+.main-container {
+  position: relative;
+}
+
+.header-title-container {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 80px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+}
+
+.linkedIn:hover {
+  color: #0077b5;
+}
+
+.github:hover {
+  color: #333;
+}
+
+.about-me {
+  width: 100vw;
+  height: 100vh;
+  background-color: #333;
+  position: static;
 }

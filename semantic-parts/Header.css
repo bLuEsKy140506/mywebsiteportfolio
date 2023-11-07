@@ -1,0 +1,22 @@
+.header-container {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background-color: rgba(250, 235, 215, 0.596);
+  z-index: 1;
+}
+
+.logo-container {
+  width: 25vw;
+}
+
+.nav-container {
+  display: flex;
+  width: 80vw;
+  gap: 20px;
+  justify-content: end;
+}
