@@ -27,6 +27,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <section className="about-me">About</section>
     </div>
   );
 }
