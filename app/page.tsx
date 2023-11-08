@@ -1,9 +1,11 @@
 import Image from "next/image";
+import avatar from "../assets/my-cartoon-avatar.jpg";
+
 import "./globals.css";
 export default function Home() {
   return (
     <div className="landing-page-container">
-      <main className="main-container">
+      <main id="main" className="main-container">
         <div className="header-title-container">
           <h1 className="header-title">Hello, I&apos;m Earl</h1>
           <h2>A Web Developer</h2>
@@ -27,7 +29,20 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <section className="about-me">About</section>
+      <section id="about" className="about-me">
+        <div className="img-container">
+          <Image src={avatar} alt="my-avatar" width={300} height={500} />
+        </div>
+
+        <div className="description-container">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            explicabo voluptatem asperiores nisi illo mollitia illum at maiores
+            fugit, quia voluptate modi esse dolor? Asperiores, odit? Eius ipsam
+            dolorem atque?
+          </p>
+        </div>
+      </section>
     </div>
   );
 }

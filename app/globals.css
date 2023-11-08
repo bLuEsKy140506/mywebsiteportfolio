@@ -53,6 +53,7 @@ body {
 
 .linkedIn:hover {
   color: #0077b5;
+  background-color: blue;
 }
 
 .github:hover {
@@ -64,4 +65,19 @@ body {
   height: 100vh;
 
   position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
 }
+
+.description-container {
+  width: 50%;
+}
+/* .about-me-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  padding: 0 5rem;
+} */

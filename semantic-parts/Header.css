@@ -6,15 +6,20 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 60px;
-  padding: 20px 10px;
+  gap: 100px;
+  padding: 20px;
   background-color: rgba(5, 5, 5, 0.822);
   z-index: 1;
   color: rgb(0, 173, 173);
+  font-weight: 700;
 }
 
 .logo-container {
   width: 25vw;
+}
+
+.logo-format {
+  border-radius: 20px;
 }
 
 .nav-container {
