@@ -1,5 +1,12 @@
 import Image from "next/image";
 import avatar from "../assets/my-cartoon-avatar.jpg";
+import newsblog from "../assets/blogs.svg";
+import jslogic from "../assets/js-square-svgrepo-com.svg";
+import avatar2 from "../assets/avatar.svg";
+import todolist from "../assets/list-new.svg";
+import blogreact from "../assets/blog-blue.svg";
+import beer from "../assets/beer.svg";
+import onlineshop from "../assets/onlineshop.svg";
 
 import "./globals.css";
 export default function Home() {
@@ -51,7 +58,15 @@ export default function Home() {
       </section>
       <section id="projects">
         <p>This is actually my bootcamp projects</p>
-        <figure></figure>
+        <figure className="project-icon-container">
+          <Image src={avatar2} alt="cv" width={200} height={200} />
+          <Image src={jslogic} alt="cv" width={200} height={200} />
+          <Image src={newsblog} alt="cv" width={200} height={200} />
+          <Image src={blogreact} alt="cv" width={200} height={200} />
+          <Image src={todolist} alt="cv" width={200} height={200} />
+          <Image src={beer} alt="cv" width={200} height={200} />
+          <Image src={onlineshop} alt="cv" width={200} height={200} />
+        </figure>
       </section>
     </div>
   );
