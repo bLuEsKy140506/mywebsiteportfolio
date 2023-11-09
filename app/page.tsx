@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import avatar from "../assets/my-cartoon-avatar.jpg";
 import newsblog from "../assets/blogs.svg";
 import jslogic from "../assets/js-square-svgrepo-com.svg";
@@ -59,13 +60,45 @@ export default function Home() {
       <section id="projects">
         <p>This is actually my bootcamp projects</p>
         <figure className="project-icon-container">
-          <Image src={avatar2} alt="cv" width={200} height={200} />
-          <Image src={jslogic} alt="cv" width={200} height={200} />
-          <Image src={newsblog} alt="cv" width={200} height={200} />
-          <Image src={blogreact} alt="cv" width={200} height={200} />
-          <Image src={todolist} alt="cv" width={200} height={200} />
-          <Image src={beer} alt="cv" width={200} height={200} />
-          <Image src={onlineshop} alt="cv" width={200} height={200} />
+          <Link href="https://butlay-cv.vercel.app/" target="_blank">
+            <Image src={avatar2} alt="cv" width={200} height={200} />
+          </Link>
+
+          <Link
+            href="https://codesandbox.io/s/individual-project-assignment-2-nk7r3c?file=/src/index.mjs"
+            target="_blank"
+          >
+            <Image src={jslogic} alt="cv" width={200} height={200} />
+          </Link>
+
+          <Link href="https://ipa-news-blog-butlay.vercel.app/" target="_blank">
+            <Image src={newsblog} alt="cv" width={200} height={200} />
+          </Link>
+
+          <Link
+            href="https://ipa-react-news-blog-butlay.vercel.app/"
+            target="_blank"
+          >
+            <Image src={blogreact} alt="cv" width={200} height={200} />
+          </Link>
+
+          <Link href="https://todoappbyearl.vercel.app/" target="_blank">
+            <Image src={todolist} alt="cv" width={200} height={200} />
+          </Link>
+
+          <Link
+            href="https://brewery-finder-by-earl.vercel.app/"
+            target="_blank"
+          >
+            <Image src={beer} alt="cv" width={200} height={200} />
+          </Link>
+
+          <Link
+            href="https://onlineshopbyearl-bluesky140506.vercel.app/"
+            target="_blank"
+          >
+            <Image src={onlineshop} alt="cv" width={200} height={200} />
+          </Link>
         </figure>
       </section>
     </div>
