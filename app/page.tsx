@@ -31,7 +31,13 @@ export default function Home() {
       </main>
       <section id="about" className="about-me">
         <div className="img-container">
-          <Image src={avatar} alt="my-avatar" width={300} height={500} />
+          <Image
+            src={avatar}
+            className="avatar"
+            alt="my-avatar"
+            width={300}
+            height={500}
+          />
         </div>
 
         <div className="description-container">
@@ -42,6 +48,10 @@ export default function Home() {
             dolorem atque?
           </p>
         </div>
+      </section>
+      <section id="projects">
+        <p>This is actually my bootcamp projects</p>
+        <figure></figure>
       </section>
     </div>
   );

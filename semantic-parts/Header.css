@@ -1,13 +1,14 @@
 .header-container {
   position: fixed;
   top: 0;
-  width: 10vw;
+  width: 12vw;
+  min-width: 60px;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
-  gap: 100px;
-  padding: 20px;
+
+  padding: 1vw;
   background-color: rgba(5, 5, 5, 0.822);
   z-index: 1;
   color: rgb(0, 173, 173);
@@ -15,17 +16,19 @@
 }
 
 .logo-container {
-  width: 25vw;
+  display: flex;
+  justify-content: center;
 }
 
 .logo-format {
   border-radius: 20px;
+  min-width: 45px;
+  width: 8vw;
 }
 
 .nav-container {
   display: flex;
   flex-direction: column;
-  width: 80vw;
   gap: 20px;
-  justify-content: end;
+  align-items: center;
 }

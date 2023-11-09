@@ -71,13 +71,25 @@ body {
   gap: 3rem;
 }
 
+.avatar {
+  background-color: rgba(255, 255, 255, 1);
+  color: #000;
+  border-radius: 9px;
+  box-shadow: 0px 0px 90px -19px rgba(80, 227, 194, 1),
+    0px 7px 13px -3px rgba(0, 0, 0, 0.3),
+    0px -3px 0px 0px rgba(0, 0, 0, 0.2) inset;
+}
 .description-container {
   width: 50%;
 }
-/* .about-me-container {
+
+#projects {
+  width: 100%;
+  height: 100vh;
+
+  position: static;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
-  padding: 0 5rem;
-} */
+  gap: 3rem;
+}

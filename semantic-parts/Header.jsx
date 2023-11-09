@@ -17,10 +17,10 @@ const HeaderComponent = () => {
           />
         </Link>
       </div>
-      <nav className="nav-container flex ">
+      <nav className="nav-container">
         <Link href="#about">About</Link>
         <Link href="#projects">Project</Link>
-        <Link href="#contact">Contact Me</Link>
+        <Link href="#contact">Contact</Link>
       </nav>
     </div>
   );
