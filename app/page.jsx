@@ -1,13 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import Carousel from "../components/carousel.component.js";
 import avatar from "../assets/my-cartoon-avatar.jpg";
-import newsblog from "../assets/blogs.svg";
-import jslogic from "../assets/js-square-svgrepo-com.svg";
-import avatar2 from "../assets/avatar.svg";
-import todolist from "../assets/list-new.svg";
-import blogreact from "../assets/blog-blue.svg";
-import beer from "../assets/beer.svg";
-import onlineshop from "../assets/onlineshop.svg";
 
 import "./globals.css";
 export default function Home() {
@@ -58,7 +52,11 @@ export default function Home() {
         </div>
       </section>
       <section id="projects">
-        <p>This is actually my bootcamp projects</p>
+        <p>These are actually my bootcamp projects</p>
+        <div className="flex justify-center items-center w-[100%] m-auto">
+          <Carousel />
+        </div>
+        {/* 
         <figure className="project-icon-container">
           <Link href="https://butlay-cv.vercel.app/" target="_blank">
             <Image src={avatar2} alt="cv" width={200} height={200} />
@@ -85,7 +83,6 @@ export default function Home() {
           <Link href="https://todoappbyearl.vercel.app/" target="_blank">
             <Image src={todolist} alt="cv" width={200} height={200} />
           </Link>
-
           <Link
             href="https://brewery-finder-by-earl.vercel.app/"
             target="_blank"
@@ -99,7 +96,39 @@ export default function Home() {
           >
             <Image src={onlineshop} alt="cv" width={200} height={200} />
           </Link>
-        </figure>
+        </figure> */}
+        {/* <Carousel>
+          <Image
+            src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+            alt="..."
+            width={50}
+            height={50}
+          />
+          <Image
+            src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
+            alt="..."
+            width={50}
+            height={50}
+          />
+          <Image
+            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+            alt="..."
+            width={50}
+            height={50}
+          />
+          <Image
+            src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
+            alt="..."
+            width={50}
+            height={50}
+          />
+          <Image
+            src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
+            alt="..."
+            width={50}
+            height={50}
+          />
+        </Carousel> */}
       </section>
     </div>
   );
