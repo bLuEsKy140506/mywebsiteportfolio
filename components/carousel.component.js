@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import {
   BsFillArrowRightCircleFill,
   BsFillArrowLeftCircleFill,
@@ -29,6 +31,17 @@ import sass from "../assets/tech-Sass.svg";
 import nextjs from "../assets/tech-Nextjs.svg";
 
 export default function Carousel() {
+  let [current, setCurrent] = useState(0);
+
+  let previousSlide = () => {
+    if (current === 0) setCurrent(slides.length - 1);
+    else setCurrent(current - 1);
+  };
+
+  let nextSlide = () => {
+    if (current === slides.length - 1) setCurrent(0);
+    else setCurrent(current + 1);
+  };
   let slides = [
     {
       image: avatar2,
@@ -59,30 +72,42 @@ export default function Carousel() {
       href: "https://onlineshopbyearl-bluesky140506.vercel.app/",
     },
   ];
+
   return (
-    <div className="overflow-hidden relative border-solid border-2 border-sky-500 w-56 h-56">
-      <div className="overflow-hidden relative">
-        {slides.map((s) => {
-          return (
-            <div key={s.href}>
-              <Link href={s.href} target="_blank">
-                <Image
-                  src={s.image}
-                  alt="images"
-                  width={200}
-                  height={200}
-                  key={s}
-                />
-              </Link>
-            </div>
-          );
-        })}
+    <div className="overflow-hidden relative border-solid border-2 border-sky-500 z-0 w-auto h-96">
+      <div className="flex z-0">
+        {slides.map((s) => (
+          <div
+            key={s.href}
+            className="flex transition ease-out duration-40 items-icon z-10"
+            style={{
+              transform: `translateX(-${current * 100}%)`,
+            }}
+          >
+            <Link
+              href="https://butlay-cv.vercel.app/"
+              target="_blank"
+              className="items-icon flex"
+            >
+              <p>side right</p>
+              <Image
+                src={s.image}
+                alt="images"
+                width={200}
+                height={200}
+                key={s}
+              />
+              <p>side right</p>
+            </Link>
+          </div>
+        ))}
+        ;
       </div>
-      <div className="absolute top-0 h-full w-full justify-between items-center flex text-white px-10 text-3xl">
-        <button>
+      <div className="absolute top-0 h-full w-full justify-between items-center flex text-white px-10 text-3xl z-20">
+        <button onClick={previousSlide}>
           <BsFillArrowLeftCircleFill />
         </button>
-        <button>
+        <button onClick={nextSlide}>
           <BsFillArrowRightCircleFill />
         </button>
       </div>
