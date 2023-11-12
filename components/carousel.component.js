@@ -25,6 +25,8 @@ import react_icon from "../assets/tech-React.svg";
 import redux from "../assets/tech-Redux.svg";
 import materialUI from "../assets/tech-MaterialUI.svg";
 import api from "../assets/tech-API.svg";
+import googleMap from "../assets/google-map-icon.svg";
+import googleAuth from "../assets/google_auth.svg";
 import mongodb from "../assets/tech-mongodb.svg";
 import tailwind from "../assets/tech-Tailwind.svg";
 import sass from "../assets/tech-Sass.svg";
@@ -46,40 +48,57 @@ export default function Carousel() {
     {
       image: avatar2,
       href: "https://butlay-cv.vercel.app/",
+      tech: [html, css],
     },
     {
       image: jslogic,
       href: "https://codesandbox.io/s/individual-project-assignment-2-nk7r3c?file=/src/index.mjs",
+      tech: [js],
     },
     {
       image: newsblog,
       href: "https://ipa-news-blog-butlay.vercel.app/",
+      tech: [html, css, sass, js],
     },
     {
       image: blogreact,
       href: "https://ipa-react-news-blog-butlay.vercel.app/",
+      tech: [html, css, js, react_icon],
     },
     {
       image: todolist,
       href: "https://todoappbyearl.vercel.app/",
+      tech: [html, css, js, react_icon, redux, api, materialUI],
     },
     {
       image: beer,
       href: "https://brewery-finder-by-earl.vercel.app/",
+      tech: [html, css, js, react_icon, redux, api, googleMap],
     },
     {
       image: onlineshop,
       href: "https://onlineshopbyearl-bluesky140506.vercel.app/",
+      tech: [
+        html,
+        css,
+        js,
+        react_icon,
+        nextjs,
+        redux,
+        api,
+        mongodb,
+        googleAuth,
+      ],
     },
   ];
 
   return (
-    <div className="overflow-hidden relative border-solid border-2 border-sky-500 z-0 w-auto h-96">
-      <div className="flex z-0 justify-center items-center m-auto">
+    <div className="overflow-hidden relative border-solid border-2 z-0 w-auto h-96">
+      <div className="flex h-96 m-auto">
         {slides.map((s) => (
           <div
             key={s.href}
-            className="flex transition ease-out duration-40 z-30 justify-center items-center"
+            className="flex transition ease-out duration-80 justify-center items-center "
             style={{
               transform: `translateX(-${current * 100}%)`,
             }}
@@ -87,15 +106,34 @@ export default function Carousel() {
             <Link
               href={s.href}
               target="_blank"
-              className="items-icon flex justify-center items-center z-30 my-3.5"
+              className="items-icon flex flex-col justify-center items-center "
             >
-              <Image src={s.image} alt="images" width={100} height={100} />
+              <Image
+                src={s.image}
+                alt="images"
+                width={100}
+                height={100}
+                className="h-72 w-auto mb-8"
+              />
+              <div>
+                <figure className="flex w-auto h-12 justify-center">
+                  {s.tech.map((item) => (
+                    <Image
+                      key={item}
+                      src={item}
+                      alt="images"
+                      width={100}
+                      height={100}
+                    />
+                  ))}
+                </figure>
+              </div>
             </Link>
           </div>
         ))}
         ;
       </div>
-      <div className="absolute bottom-0 h-full w-full justify-between items-center flex text-black px-10 text-3xl ">
+      <div className="absolute bottom-0 h-full w-full justify-between items-center flex text-black px-10 text-3xl">
         <button onClick={previousSlide} className="z-40">
           <BsFillArrowLeftCircleFill />
         </button>
