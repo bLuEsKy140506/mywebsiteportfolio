@@ -75,39 +75,31 @@ export default function Carousel() {
 
   return (
     <div className="overflow-hidden relative border-solid border-2 border-sky-500 z-0 w-auto h-96">
-      <div className="flex z-0">
+      <div className="flex z-0 justify-center items-center m-auto">
         {slides.map((s) => (
           <div
             key={s.href}
-            className="flex transition ease-out duration-40 items-icon z-10"
+            className="flex transition ease-out duration-40 z-30 justify-center items-center"
             style={{
               transform: `translateX(-${current * 100}%)`,
             }}
           >
             <Link
-              href="https://butlay-cv.vercel.app/"
+              href={s.href}
               target="_blank"
-              className="items-icon flex"
+              className="items-icon flex justify-center items-center z-30 my-3.5"
             >
-              <p>side right</p>
-              <Image
-                src={s.image}
-                alt="images"
-                width={200}
-                height={200}
-                key={s}
-              />
-              <p>side right</p>
+              <Image src={s.image} alt="images" width={100} height={100} />
             </Link>
           </div>
         ))}
         ;
       </div>
-      <div className="absolute top-0 h-full w-full justify-between items-center flex text-white px-10 text-3xl z-20">
-        <button onClick={previousSlide}>
+      <div className="absolute bottom-0 h-full w-full justify-between items-center flex text-black px-10 text-3xl ">
+        <button onClick={previousSlide} className="z-40">
           <BsFillArrowLeftCircleFill />
         </button>
-        <button onClick={nextSlide}>
+        <button onClick={nextSlide} className="z-40">
           <BsFillArrowRightCircleFill />
         </button>
       </div>
