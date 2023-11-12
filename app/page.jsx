@@ -52,8 +52,8 @@ export default function Home() {
         </div>
       </section>
       <section id="projects">
-        <p>These are actually my bootcamp projects</p>
-        <div className="flex justify-center items-center w-[100%] m-auto">
+        <p className="text-center text-2xl">My bootcamp projects</p>
+        <div className="flex justify-center items-center w-[100%] m-auto h-3/4">
           <Carousel />
         </div>
         {/* 
