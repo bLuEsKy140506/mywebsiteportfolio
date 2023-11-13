@@ -7,8 +7,8 @@ import HeaderComponent from "../semantic-parts/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My Website Portpolio",
-  description: "Earl Lauriece S. Butlay Website Portpolio",
+  title: "My Website Portfolio",
+  description: "Earl Lauriece S. Butlay Website Portfolio",
 };
 
 export default function RootLayout({

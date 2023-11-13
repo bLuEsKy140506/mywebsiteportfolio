@@ -52,7 +52,7 @@ export default function Home() {
         </div>
       </section>
       <section id="projects">
-        <p className="text-center text-2xl">My bootcamp projects</p>
+        <p className="text-center text-2xl mt-20">MY BOOTCAMP PROJECTS</p>
         <div className="flex justify-center items-center w-[100%] m-auto h-3/4">
           <Carousel />
         </div>

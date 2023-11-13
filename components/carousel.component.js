@@ -136,8 +136,8 @@ export default function Carousel() {
                       key={item}
                       src={item}
                       alt={`tech-images-${s.description}`}
-                      width={50}
-                      height={50}
+                      width={65}
+                      height={65}
                       className="grayscale-[50%]"
                     />
                   ))}
@@ -161,12 +161,27 @@ export default function Carousel() {
         ;
       </div>
       <div className="absolute bottom-0 h-full w-full justify-between items-center flex text-black px-10 text-3xl">
-        <button onClick={previousSlide} className="z-40">
+        <button onClick={previousSlide} className="z-40 hover:text-gray-700">
           <BsFillArrowLeftCircleFill />
         </button>
-        <button onClick={nextSlide} className="z-40">
+        <button onClick={nextSlide} className="z-40 hover:text-gray-700">
           <BsFillArrowRightCircleFill />
         </button>
+      </div>
+      <div className="absolute bottom-0 py-3 flex justify-center gap-3 w-full">
+        {slides.map((item, index) => (
+          <>
+            <div
+              key={item.description}
+              onClick={() => {
+                setCurrent(index);
+              }}
+              className={`rounded-full w-5 h-5 z-40 ${
+                index == current ? "bg-teal-800" : "bg-teal-400"
+              }`}
+            ></div>
+          </>
+        ))}
       </div>
     </div>
   );
