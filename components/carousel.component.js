@@ -41,8 +41,10 @@ export default function Carousel() {
   };
 
   let nextSlide = () => {
-    if (current === slides.length - 1) setCurrent(0);
-    else setCurrent(current + 1);
+    if (current === slides.length - 1) {
+      setCurrent(0);
+      console.log("i been fired");
+    } else setCurrent(current + 1);
   };
   let slides = [
     {
@@ -107,11 +109,11 @@ export default function Carousel() {
   ];
 
   return (
-    <div className="overflow-hidden relative border-solid border-2 w-auto h-full">
+    <div className="overflow-hidden relative border-solid border-2 w-auto h-full -mt-14">
       <div className="flex h-full m-auto">
         {slides.map((s) => (
           <div
-            key={s.href}
+            key={`${s.description}--container`}
             className="flex transition ease-out duration-80 justify-center items-center "
             style={{
               transform: `translateX(-${current * 100}%)`,
@@ -119,13 +121,13 @@ export default function Carousel() {
             }}
           >
             <div className="items-icon flex flex-col justify-center items-center">
-              <Link href={s.href} target="_blank">
+              <Link href={`${s.description}--image`} target="_blank">
                 <Image
                   src={s.image}
                   alt="images"
                   width={100}
                   height={100}
-                  className="h-60 w-auto mb-8"
+                  className="h-60 w-auto max-sm:h-32 mb-8"
                 />
               </Link>
               <div>
@@ -138,7 +140,7 @@ export default function Carousel() {
                       alt={`tech-images-${s.description}`}
                       width={65}
                       height={65}
-                      className="grayscale-[50%]"
+                      className="grayscale-[50%] max-sm:h-7 max-sm:w-7"
                     />
                   ))}
                 </figure>
@@ -160,7 +162,7 @@ export default function Carousel() {
         ))}
         ;
       </div>
-      <div className="absolute bottom-0 h-full w-full justify-between items-center flex text-black px-10 text-3xl">
+      <div className="absolute bottom-0 h-full w-full justify-between items-center flex text-black px-10 max-sm:px-1 text-3xl">
         <button onClick={previousSlide} className="z-40 hover:text-gray-700">
           <BsFillArrowLeftCircleFill />
         </button>
@@ -176,8 +178,8 @@ export default function Carousel() {
               onClick={() => {
                 setCurrent(index);
               }}
-              className={`rounded-full w-5 h-5 z-40 ${
-                index == current ? "bg-teal-800" : "bg-teal-400"
+              className={`rounded-full w-5 h-5 z-40 cursor-pointer ${
+                index === current ? "bg-teal-800" : "bg-teal-400"
               }`}
             ></div>
           </>
