@@ -9,12 +9,12 @@ export default function Home() {
     <div className="landing-page-container">
       <main id="main" className="main-container">
         <div className="header-title-container">
-          <h1 className="header-title">Hello, I&apos;m Earl</h1>
-          <h2>A Web Developer</h2>
+          <h1 className="header-title mb-8">Hello, I&apos;m Earl</h1>
+          <h2 className="text-2xl mb-3">Aspiring Web Developer</h2>
           <div className="social-links">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8 linkedIn"
+              className="h-10 w-10 linkedIn"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -22,7 +22,7 @@ export default function Home() {
             </svg>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8 github"
+              className="h-10 w-10 github"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -56,79 +56,6 @@ export default function Home() {
         <div className="flex justify-center items-center w-[100%] m-auto h-3/4">
           <Carousel />
         </div>
-        {/* 
-        <figure className="project-icon-container">
-          <Link href="https://butlay-cv.vercel.app/" target="_blank">
-            <Image src={avatar2} alt="cv" width={200} height={200} />
-          </Link>
-
-          <Link
-            href="https://codesandbox.io/s/individual-project-assignment-2-nk7r3c?file=/src/index.mjs"
-            target="_blank"
-          >
-            <Image src={jslogic} alt="cv" width={200} height={200} />
-          </Link>
-
-          <Link href="https://ipa-news-blog-butlay.vercel.app/" target="_blank">
-            <Image src={newsblog} alt="cv" width={200} height={200} />
-          </Link>
-
-          <Link
-            href="https://ipa-react-news-blog-butlay.vercel.app/"
-            target="_blank"
-          >
-            <Image src={blogreact} alt="cv" width={200} height={200} />
-          </Link>
-
-          <Link href="https://todoappbyearl.vercel.app/" target="_blank">
-            <Image src={todolist} alt="cv" width={200} height={200} />
-          </Link>
-          <Link
-            href="https://brewery-finder-by-earl.vercel.app/"
-            target="_blank"
-          >
-            <Image src={beer} alt="cv" width={200} height={200} />
-          </Link>
-
-          <Link
-            href="https://onlineshopbyearl-bluesky140506.vercel.app/"
-            target="_blank"
-          >
-            <Image src={onlineshop} alt="cv" width={200} height={200} />
-          </Link>
-        </figure> */}
-        {/* <Carousel>
-          <Image
-            src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-            alt="..."
-            width={50}
-            height={50}
-          />
-          <Image
-            src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
-            alt="..."
-            width={50}
-            height={50}
-          />
-          <Image
-            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
-            alt="..."
-            width={50}
-            height={50}
-          />
-          <Image
-            src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
-            alt="..."
-            width={50}
-            height={50}
-          />
-          <Image
-            src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
-            alt="..."
-            width={50}
-            height={50}
-          />
-        </Carousel> */}
       </section>
     </div>
   );
