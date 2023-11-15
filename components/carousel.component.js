@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   BsFillArrowRightCircleFill,
   BsFillArrowLeftCircleFill,
@@ -34,6 +34,15 @@ import nextjs from "../assets/tech-Nextjs.svg";
 
 export default function Carousel() {
   let [current, setCurrent] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
 
   let previousSlide = () => {
     if (current === 0) setCurrent(slides.length - 1);
@@ -108,9 +117,25 @@ export default function Carousel() {
     },
   ];
 
+  useEffect(() => {
+    if (!isHovering) {
+      const interval = setInterval(() => {
+        setCurrent(current + 1);
+        if (current === slides.length - 1) {
+          setCurrent(0);
+        } else setCurrent(current + 1);
+      }, 1500);
+      return () => clearInterval(interval);
+    }
+  }, [slides.length, current, isHovering]);
+
   return (
     <div className="overflow-hidden relative border-solid border-2 w-auto h-full -mt-14">
-      <div className="flex h-full m-auto">
+      <div
+        className="flex h-full m-auto"
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+      >
         {slides.map((s) => (
           <div
             key={`${s.description}--container`}
@@ -121,7 +146,7 @@ export default function Carousel() {
             }}
           >
             <div className="items-icon flex flex-col justify-center items-center">
-              <Link href={`${s.description}--image`} target="_blank">
+              <Link href={s.href} target="_blank">
                 <Image
                   src={s.image}
                   alt="images"
