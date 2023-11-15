@@ -42,8 +42,8 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <section id="about" className="about-me">
-        <div className="img-container">
+      <section id="about" className="about-me max-sm:flex-col ">
+        <div className="img-container max-sm:w-1/2">
           <Image
             src={avatar}
             className="avatar"
@@ -53,9 +53,9 @@ export default function Home() {
           />
         </div>
 
-        <div className="description-container">
+        <div className="description-container max-sm:w-full p-2">
           <p
-            className={`text-xl ${arvo.variable} font-sans leading-loose text-center`}
+            className={`text-xl ${arvo.variable} font-sans leading-loose text-center max-sm:text-sm`}
           >
             Hello, I&apos;m{" "}
             <span className="text-2xl font-extrabold text-teal-600">
@@ -78,25 +78,25 @@ export default function Home() {
         </div>
       </section>
       <section id="contact" className="contact-me">
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-center gap-8 max-sm:gap-4">
           <Image src={collab} alt="my-avatar" width={300} height={500} />
 
           <p
-            className={`text-xl ${arvo.variable} font-sans leading-loose text-center`}
+            className={`text-xl ${arvo.variable} font-sans leading-loose text-center max-sm:text-sm p-3`}
           >
             {/* Hello, I&apos;m{" "}
             <span className="text-2xl font-extrabold text-teal-600">
               Earl Lauriece S. Butlay
             </span> */}
             Thank you for considering{" "}
-            <span className="text-2xl font-extrabold text-teal-600">
+            <span className="text-2xl font-extrabold text-teal-600 max-sm:text-sm">
               me as a potential contributor
             </span>{" "}
             to your team&apos;s success. I am eager to bring my expertise in web
             development to enhance your digital presence. I believe in the power
             of collaboration and am excited about the possibility of being part
             of your company&apos;s journey to success.{" "}
-            <span className="text-2xl font-extrabold text-teal-600">
+            <span className="text-2xl font-extrabold text-teal-600 max-sm:text-sm">
               Let&apos;s connect and discuss how we can achieve great things
               together.
             </span>
