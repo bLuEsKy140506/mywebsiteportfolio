@@ -130,15 +130,17 @@ export default function Carousel() {
   }, [slides.length, current, isHovering]);
 
   return (
-    <div className="overflow-hidden relative border-solid border-2 w-auto h-full -mt-14">
+    <div className="overflow-hidden relative  w-auto h-full -mt-14">
       <div
         className="flex h-full m-auto"
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
       >
-        {slides.map((s) => (
+        {slides.map((s, index) => (
           <div
-            key={`${s.description}--container`}
+            key={`${s.description}--container${Math.floor(
+              Math.random() * 9999999999999 * index
+            )}`}
             className="flex transition ease-out duration-80 justify-center items-center "
             style={{
               transform: `translateX(-${current * 100}%)`,
@@ -160,7 +162,9 @@ export default function Carousel() {
                 <figure className="flex justify-center h-12 mb-6">
                   {s.tech.map((item) => (
                     <Image
-                      key={item}
+                      key={`${s.href}--element-${Math.floor(
+                        Math.random() * 9999999999999
+                      )}`}
                       src={item}
                       alt={`tech-images-${s.description}`}
                       width={65}
@@ -197,17 +201,17 @@ export default function Carousel() {
       </div>
       <div className="absolute bottom-0 py-3 flex justify-center gap-3 w-full">
         {slides.map((item, index) => (
-          <>
-            <div
-              key={item.description}
-              onClick={() => {
-                setCurrent(index);
-              }}
-              className={`rounded-full w-5 h-5 z-40 cursor-pointer ${
-                index === current ? "bg-teal-800" : "bg-teal-400"
-              }`}
-            ></div>
-          </>
+          <div
+            key={`${item.description}+${Math.floor(
+              Math.random() * 9999999999999 * index
+            )}`}
+            onClick={() => {
+              setCurrent(index);
+            }}
+            className={`rounded-full w-5 h-5 z-40 cursor-pointer ${
+              index === current ? "bg-teal-800" : "bg-teal-400"
+            }`}
+          ></div>
         ))}
       </div>
     </div>
