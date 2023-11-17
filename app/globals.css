@@ -63,8 +63,13 @@ body {
   padding: 5px;
 }
 
+.gmail {
+  padding: 1px;
+}
+
 .linkedIn:hover,
-.github:hover {
+.github:hover,
+.gmail:hover {
   color: #333;
   border-radius: 10px;
   box-shadow: rgb(42, 126, 165) 0px 0px 0px 2px inset, #71a0cc 5px 5px 0px -3px,
