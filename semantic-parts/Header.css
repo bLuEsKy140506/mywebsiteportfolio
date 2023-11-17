@@ -32,3 +32,22 @@
   gap: 20px;
   align-items: center;
 }
+
+@media only screen and (max-width: 640px) {
+  .header-container {
+    width: 100vw;
+
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 3vw 4vw;
+  }
+
+  .nav-container {
+    flex-direction: row;
+
+    align-items: center;
+    /* align-content: center; */
+  }
+}

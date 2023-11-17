@@ -130,7 +130,7 @@ export default function Carousel() {
   }, [slides.length, current, isHovering]);
 
   return (
-    <div className="overflow-hidden relative  w-auto h-full -mt-14">
+    <div className="overflow-hidden relative w-auto h-full -mt-14">
       <div
         className="flex h-full m-auto"
         onMouseOver={handleMouseOver}
