@@ -19,8 +19,9 @@ const HeaderComponent = () => {
       </div>
       <nav className="nav-container">
         <Link href="#projects">Project</Link>
-        <Link href="#contact">Contact</Link>
+
         <Link href="#about">About</Link>
+        <Link href="#contact">Contact</Link>
       </nav>
     </div>
   );
