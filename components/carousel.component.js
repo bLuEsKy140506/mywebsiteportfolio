@@ -129,91 +129,97 @@ export default function Carousel() {
     }
   }, [slides.length, current, isHovering]);
 
+  let randomizer = Math.floor(Math.random() * 999);
+
   return (
-    <div className="overflow-hidden relative w-auto h-full -mt-14">
-      <div
-        className="flex h-full m-auto"
-        onMouseOver={handleMouseOver}
-        onMouseOut={handleMouseOut}
-      >
-        {slides.map((s, index) => (
+    <>
+      <p className="text-center text-2xl mt-20">MY BOOTCAMP PROJECTS</p>
+      <div className="flex justify-center items-center w-[100%] m-auto h-3/4">
+        <div className="overflow-hidden relative w-auto h-full -mt-14">
           <div
-            key={`${s.description}--container${Math.floor(
-              Math.random() * 9999999999999 * index
-            )}`}
-            className="flex transition ease-out duration-80 justify-center items-center "
-            style={{
-              transform: `translateX(-${current * 100}%)`,
-              zIndex: "39",
-            }}
+            className="flex h-full m-auto"
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
           >
-            <div className="items-icon flex flex-col justify-center items-center">
-              <Link href={s.href} target="_blank">
-                <Image
-                  src={s.image}
-                  alt="images"
-                  width={100}
-                  height={100}
-                  className="h-60 w-auto max-sm:h-32 mb-8"
-                />
-              </Link>
-              <div>
-                <p className="text-center text-2xl mb-4">{s.description}</p>
-                <figure className="flex justify-center h-12 mb-6">
-                  {s.tech.map((item) => (
-                    <Image
-                      key={`${s.href}--element-${Math.floor(
-                        Math.random() * 9999999999999
-                      )}`}
-                      src={item}
-                      alt={`tech-images-${s.description}`}
-                      width={65}
-                      height={65}
-                      className="grayscale-[50%] max-sm:h-7 max-sm:w-7"
-                    />
-                  ))}
-                </figure>
-                <p className="flex justify-center gap-4 mb-4">
+            {slides.map((s, index) => (
+              <div
+                key={`${s.description}--container${randomizer * index}`}
+                className="flex transition ease-out duration-80 justify-center items-center "
+                style={{
+                  transform: `translateX(-${current * 100}%)`,
+                  zIndex: "30",
+                }}
+              >
+                <div className="items-icon flex flex-col justify-center items-center">
                   <Link href={s.href} target="_blank">
-                    <button className="z-50 bg-teal-500 hover:bg-teal-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 hover:border-white rounded-full shadow ">
-                      Live Demo
-                    </button>
+                    <Image
+                      src={s.image}
+                      alt="images"
+                      width={100}
+                      height={100}
+                      className="h-60 w-auto max-sm:h-32 mb-8"
+                    />
                   </Link>
-                  <Link href={s.gitHub} target="_blank">
-                    <button className="z-50 bg-teal-500 hover:bg-teal-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 hover:border-white rounded-full shadow">
-                      Source Code
-                    </button>
-                  </Link>
-                </p>
+                  <div>
+                    <p className="text-center text-2xl mb-4 max-sm:text-lg">
+                      {s.description}
+                    </p>
+                    <figure className="flex justify-center h-12 mb-6">
+                      {s.tech.map((item) => (
+                        <Image
+                          key={`${s.href}--element-${randomizer * index}`}
+                          src={item}
+                          alt={`tech-images-${s.description}`}
+                          width={65}
+                          height={65}
+                          className="grayscale-[60%] max-sm:h-6 max-sm:w-6"
+                        />
+                      ))}
+                    </figure>
+                    <p className="flex justify-center gap-4 mb-4">
+                      <Link href={s.href} target="_blank">
+                        <button className="z-50 bg-teal-500 hover:bg-teal-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 hover:border-white rounded-full shadow max-sm:text-sm">
+                          Live Demo
+                        </button>
+                      </Link>
+                      <Link href={s.gitHub} target="_blank">
+                        <button className="z-50 bg-teal-500 hover:bg-teal-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 hover:border-white rounded-full shadow max-sm:text-sm">
+                          Source Code
+                        </button>
+                      </Link>
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
+            ;
           </div>
-        ))}
-        ;
+          <div className="absolute bottom-0 h-full w-full justify-between items-center flex text-black px-10 max-sm:px-1 text-3xl">
+            <button
+              onClick={previousSlide}
+              className="z-40 hover:text-gray-700"
+            >
+              <BsFillArrowLeftCircleFill />
+            </button>
+            <button onClick={nextSlide} className="z-40 hover:text-gray-700">
+              <BsFillArrowRightCircleFill />
+            </button>
+          </div>
+          <div className="absolute bottom-0 py-3 flex justify-center gap-3 w-full">
+            {slides.map((item, index) => (
+              <div
+                key={`${item.description} ${randomizer * index}`}
+                onClick={() => {
+                  setCurrent(index);
+                }}
+                className={`rounded-full w-5 h-5 z-40 cursor-pointer ${
+                  index === current ? "bg-teal-800" : "bg-teal-400"
+                }`}
+              ></div>
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="absolute bottom-0 h-full w-full justify-between items-center flex text-black px-10 max-sm:px-1 text-3xl">
-        <button onClick={previousSlide} className="z-40 hover:text-gray-700">
-          <BsFillArrowLeftCircleFill />
-        </button>
-        <button onClick={nextSlide} className="z-40 hover:text-gray-700">
-          <BsFillArrowRightCircleFill />
-        </button>
-      </div>
-      <div className="absolute bottom-0 py-3 flex justify-center gap-3 w-full">
-        {slides.map((item, index) => (
-          <div
-            key={`${item.description}+${Math.floor(
-              Math.random() * 9999999999999 * index
-            )}`}
-            onClick={() => {
-              setCurrent(index);
-            }}
-            className={`rounded-full w-5 h-5 z-40 cursor-pointer ${
-              index === current ? "bg-teal-800" : "bg-teal-400"
-            }`}
-          ></div>
-        ))}
-      </div>
-    </div>
+    </>
   );
 }

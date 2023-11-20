@@ -5,7 +5,7 @@ import image from "../assets/logo.png";
 
 const HeaderComponent = () => {
   return (
-    <div className="header-container">
+    <div className="header-container z-50">
       <div className="logo-container">
         <Link href="#main">
           <Image
