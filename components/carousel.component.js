@@ -128,8 +128,6 @@ export default function Carousel() {
     }
   }, [slides.length, current, isHovering]);
 
-  let randomizer = Math.floor(Math.random() * 999999);
-
   return (
     <>
       <p className="text-center text-2xl mt-20">MY BOOTCAMP PROJECTS</p>
@@ -159,9 +157,6 @@ export default function Carousel() {
                       width={100}
                       height={100}
                       className="h-60 w-auto max-sm:h-32 mb-8"
-                      style={{
-                        width: "auto",
-                      }}
                     />
                   </Link>
                   <div>
@@ -179,10 +174,6 @@ export default function Carousel() {
                           width={65}
                           height={65}
                           className="grayscale-[60%] max-sm:h-6 max-sm:w-6"
-                          style={{
-                            width: "auto",
-                            height: "auto",
-                          }}
                         />
                       ))}
                     </figure>
