@@ -2,6 +2,7 @@ import "./Header-NavBar.css";
 import Link from "next/link";
 import Image from "next/image";
 import image from "../assets/logo.png";
+import "../app/globals.css";
 
 const HeaderNavBar = () => {
   return (

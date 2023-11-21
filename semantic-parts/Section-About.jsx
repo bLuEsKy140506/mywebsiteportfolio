@@ -20,10 +20,7 @@ const SectionAbout = () => {
           className="avatar "
           alt="my-avatar"
           width={300}
-          height={400}
-          style={{
-            width: "auto",
-          }}
+          height={300}
         />
       </div>
 

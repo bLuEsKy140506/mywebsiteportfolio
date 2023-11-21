@@ -19,7 +19,7 @@ const SectionContact = () => {
         <Image src={collab} alt="my-avatar" width={200} height={200} />
 
         <p
-          className={`text-xl ${arvo.variable} font-sans leading-loose text-center max-sm:text-sm p-3`}
+          className={`text-xl ${arvo.variable} font-sans leading-loose text-center max-sm:text-sm p-3 w-3/4`}
         >
           Thank you for considering{" "}
           <span className="text-2xl font-extrabold text-teal-600 max-sm:text-sm">
