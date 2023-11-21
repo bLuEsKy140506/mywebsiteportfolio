@@ -3,7 +3,8 @@ import Link from "next/link";
 import gmail from "../assets/gmail.svg";
 
 import "../app/globals.css";
-import "./Section-Hero.css";
+
+import "./Section-hero.css";
 
 export default function HeroSection() {
   return (
