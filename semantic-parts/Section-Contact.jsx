@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Arvo } from "next/font/google";
 import collab from "../assets/collaboration.svg";
 import gmail from "../assets/gmail.svg";
-import "./Header-NavBar.css";
+
 import "../app/globals.css";
 
 const arvo = Arvo({

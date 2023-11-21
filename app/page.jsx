@@ -1,13 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
 import Hero from "../semantic-parts/Section-Hero.jsx";
 import Carousel from "../components/carousel.component.js";
 import SectionAbout from "../semantic-parts/Section-About.jsx";
 import SectionContact from "../semantic-parts/Section-Contact.jsx";
-
-
-
-
 
 import "./globals.css";
 

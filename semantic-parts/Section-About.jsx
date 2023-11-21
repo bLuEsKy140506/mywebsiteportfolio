@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Arvo } from "next/font/google";
 import avatar from "../assets/real-earl-flip.jpg";
-import "./Header-NavBar.css";
+
 import "../app/globals.css";
 
 const arvo = Arvo({
