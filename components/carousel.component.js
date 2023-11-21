@@ -52,7 +52,6 @@ export default function Carousel() {
   let nextSlide = () => {
     if (current === slides.length - 1) {
       setCurrent(0);
-      console.log("i been fired");
     } else setCurrent(current + 1);
   };
   let slides = [
@@ -129,7 +128,7 @@ export default function Carousel() {
     }
   }, [slides.length, current, isHovering]);
 
-  let randomizer = Math.floor(Math.random() * 999);
+  let randomizer = Math.floor(Math.random() * 999999);
 
   return (
     <>
@@ -143,7 +142,9 @@ export default function Carousel() {
           >
             {slides.map((s, index) => (
               <div
-                key={`${s.description}--container${randomizer * index}`}
+                key={`${s.description}--container${Math.floor(
+                  Math.random() * 999999
+                )}`}
                 className="flex transition ease-out duration-80 justify-center items-center "
                 style={{
                   transform: `translateX(-${current * 100}%)`,
@@ -158,6 +159,9 @@ export default function Carousel() {
                       width={100}
                       height={100}
                       className="h-60 w-auto max-sm:h-32 mb-8"
+                      style={{
+                        width: "auto",
+                      }}
                     />
                   </Link>
                   <div>
@@ -167,12 +171,18 @@ export default function Carousel() {
                     <figure className="flex justify-center h-12 mb-6">
                       {s.tech.map((item) => (
                         <Image
-                          key={`${s.href}--element-${randomizer * index}`}
+                          key={`--element-${Math.floor(
+                            Math.random() * 99999999999
+                          )}`}
                           src={item}
                           alt={`tech-images-${s.description}`}
                           width={65}
                           height={65}
                           className="grayscale-[60%] max-sm:h-6 max-sm:w-6"
+                          style={{
+                            width: "auto",
+                            height: "auto",
+                          }}
                         />
                       ))}
                     </figure>
@@ -208,7 +218,9 @@ export default function Carousel() {
           <div className="absolute bottom-0 py-3 flex justify-center gap-3 w-full">
             {slides.map((item, index) => (
               <div
-                key={`${item.description} ${randomizer * index}`}
+                key={`${item.description}---description${Math.floor(
+                  Math.random() * 999999999
+                )}`}
                 onClick={() => {
                   setCurrent(index);
                 }}

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
-import HeaderComponent from "../semantic-parts/Header";
+
+import HeaderNavBar from "../semantic-parts/Header-NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <HeaderComponent />
+        <HeaderNavBar />
 
         {children}
       </body>

@@ -1,9 +1,9 @@
-import "./Header.css";
+import "./Header-NavBar.css";
 import Link from "next/link";
 import Image from "next/image";
 import image from "../assets/logo.png";
 
-const HeaderComponent = () => {
+const HeaderNavBar = () => {
   return (
     <div className="header-container z-50">
       <div className="logo-container">
@@ -12,8 +12,8 @@ const HeaderComponent = () => {
             src={image}
             alt="earl-logo"
             className="logo-format"
-            width={100}
-            height={100}
+            width={250}
+            height={250}
           />
         </Link>
       </div>
@@ -27,4 +27,4 @@ const HeaderComponent = () => {
   );
 };
 
-export default HeaderComponent;
+export default HeaderNavBar;
