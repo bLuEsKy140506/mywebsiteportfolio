@@ -16,14 +16,17 @@
   }
 }
 
+* {
+  scroll-behavior: smooth;
+}
 body {
   color: rgb(88, 88, 88);
   background-color: rgba(185, 185, 185, 0.288);
   position: relative;
 }
 .landing-page-container {
-  margin-left: 15vw;
-  width: 85vw;
+  margin-left: 12vw;
+  width: 88vw;
 }
 .main-container {
   position: relative;
@@ -104,6 +107,12 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 5vw;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
 
 @media only screen and (max-width: 640px) {

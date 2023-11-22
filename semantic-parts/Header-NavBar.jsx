@@ -2,6 +2,9 @@ import "./Header-NavBar.css";
 import Link from "next/link";
 import Image from "next/image";
 import image from "../assets/logo.png";
+import project from "../assets/project2.svg";
+import profile from "../assets/profile2.svg";
+import contact from "../assets/contact2.svg";
 import "../app/globals.css";
 
 const HeaderNavBar = () => {
@@ -19,10 +22,24 @@ const HeaderNavBar = () => {
         </Link>
       </div>
       <nav className="nav-container">
-        <Link href="#projects">Project</Link>
-
-        <Link href="#about">About</Link>
-        <Link href="#contact">Contact</Link>
+        <Link href="#projects" className="flex">
+          <span className="icon">
+            <Image src={project} alt="project-icon" width={25} height={25} />
+          </span>
+          <span className="text">Project</span>
+        </Link>
+        <Link href="#about" className="flex">
+          <span className="icon">
+            <Image src={profile} alt="project-icon" width={25} height={25} />
+          </span>
+          <span className="text">About</span>
+        </Link>
+        <Link href="#contact" className="flex">
+          <span className="icon">
+            <Image src={contact} alt="project-icon" width={25} height={25} />
+          </span>
+          <span className="text">Contact</span>
+        </Link>
       </nav>
     </div>
   );
