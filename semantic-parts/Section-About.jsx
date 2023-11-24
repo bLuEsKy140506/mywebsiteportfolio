@@ -26,7 +26,7 @@ const SectionAbout = () => {
 
       <div className="description-container max-sm:w-full p-2">
         <p
-          className={`text-xl ${arvo.variable} font-sans leading-loose text-center max-sm:text-sm`}
+          className={`text-xl ${arvo.variable} font-sans leading-loose text-center max-sm:text-sm max-sm:px-10`}
         >
           Hello, I&apos;m{" "}
           <span className="text-2xl font-extrabold text-teal-600 max-sm:text-sm">

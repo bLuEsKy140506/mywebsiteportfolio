@@ -1,16 +1,31 @@
+"use client";
 import Hero from "../semantic-parts/Section-Hero.jsx";
 import Carousel from "../components/carousel.component.js";
 import SectionAbout from "../semantic-parts/Section-About.jsx";
 import SectionContact from "../semantic-parts/Section-Contact.jsx";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HeaderNavBar from "../semantic-parts/Header-NavBar";
 import "./globals.css";
 
-export default function Home() {
+export default function App() {
   return (
-    <div className={`landing-page-container`}>
-      <main id="main" className="main-container">
+    <>
+      <Router>
+        <HeaderNavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+    </>
+  );
+}
+
+export function Home() {
+  return (
+    <main className={`landing-page-container`}>
+      <section id="hero" className="main-container">
         <Hero />
-      </main>
+      </section>
 
       <section id="projects" className="max-sm:h-full">
         <Carousel />
@@ -19,9 +34,10 @@ export default function Home() {
       <section id="about" className="about-me max-sm:flex-col ">
         <SectionAbout />
       </section>
+
       <section id="contact" className="contact-me">
         <SectionContact />
       </section>
-    </div>
+    </main>
   );
 }
