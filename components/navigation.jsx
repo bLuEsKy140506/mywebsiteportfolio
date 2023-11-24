@@ -1,4 +1,3 @@
-"use client";
 import Hero from "../semantic-parts/Section-Hero.jsx";
 import Carousel from "../components/carousel.component.js";
 import SectionAbout from "../semantic-parts/Section-About.jsx";
