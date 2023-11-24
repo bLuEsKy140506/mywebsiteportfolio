@@ -7,20 +7,20 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HeaderNavBar from "../semantic-parts/Header-NavBar";
 import "./globals.css";
 
-export default function App() {
+export default function Home() {
   return (
     <>
       <Router>
         <HeaderNavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Navigation />} />
         </Routes>
       </Router>
     </>
   );
 }
 
-export function Home() {
+export function Navigation() {
   return (
     <main className={`landing-page-container`}>
       <section id="hero" className="main-container">
