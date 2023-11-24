@@ -206,7 +206,7 @@ export default function Carousel() {
               <BsFillArrowRightCircleFill />
             </button>
           </div>
-          <div className="absolute bottom-0 py-3 px-10 flex justify-center items-center gap-3 w-full">
+          <div className="absolute bottom-0 py-3 px-10 flex justify-center gap-3 w-full items-end">
             {slides.map((item, index) => (
               <div
                 key={`${item.description}---description${Math.floor(
