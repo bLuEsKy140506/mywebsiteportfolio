@@ -1,5 +1,6 @@
+"use client";
 import "./Header-NavBar.css";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Image from "next/image";
 import image from "../assets/logo.png";
 import project from "../assets/project2.svg";
@@ -13,16 +14,16 @@ const HeaderNavBar = () => {
   const [activeLink, setActiveLink] = useState("hero");
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const scrollToSection = (sectionIds) => {
-    const element = document.getElementById(sectionIds);
-    if (element) {
-      const marginTop = 0;
-      const scrollToY =
-        element.getBoundingClientRect().top + window.scrollY - marginTop;
-      window.scrollTo({ top: scrollToY, behavior: "smooth" });
-      setActiveLink(sectionIds);
-    }
-  };
+  // const scrollToSection = (sectionIds) => {
+  //   const element = document.getElementById(sectionIds);
+  //   if (element) {
+  //     const marginTop = 0;
+  //     const scrollToY =
+  //       element.getBoundingClientRect().top + window.scrollY - marginTop;
+  //     window.scrollTo({ top: scrollToY, behavior: "smooth" });
+  //     setActiveLink(sectionIds);
+  //   }
+  // };
 
   const determineActiveSection = () => {
     for (let i = sectionIds.length - 1; i >= 0; i--) {
@@ -58,8 +59,8 @@ const HeaderNavBar = () => {
   return (
     <div className="header-container z-50">
       <div className="logo-container">
-        <div onClick={() => scrollToSection("hero")}>
-          <Link to="/">
+        <div>
+          <Link href="#hero">
             <Image
               src={image}
               alt="earl-logo"
@@ -75,11 +76,7 @@ const HeaderNavBar = () => {
         </div>
       </div>
       <nav className="nav-container">
-        <Link
-          to="/"
-          onClick={() => scrollToSection("projects")}
-          className="flex gap-2"
-        >
+        <Link href="#projects" className="flex gap-2">
           <span>
             <Image src={project} alt="project-icon" width={25} height={25} />
           </span>
@@ -88,11 +85,7 @@ const HeaderNavBar = () => {
           </span>
         </Link>
 
-        <Link
-          to="/"
-          onClick={() => scrollToSection("about")}
-          className="flex gap-2"
-        >
+        <Link href="#about" className="flex gap-2">
           <span>
             <Image src={profile} alt="about-icon" width={25} height={25} />
           </span>
@@ -101,11 +94,7 @@ const HeaderNavBar = () => {
           </span>
         </Link>
 
-        <Link
-          to="/"
-          onClick={() => scrollToSection("contact")}
-          className="flex gap-2"
-        >
+        <Link href="#contact" className="flex gap-2">
           <span>
             <Image src={contact} alt="about-icon" width={25} height={25} />
           </span>

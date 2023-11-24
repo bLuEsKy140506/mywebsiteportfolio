@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   BsFillArrowRightCircleFill,
   BsFillArrowLeftCircleFill,
@@ -116,17 +116,17 @@ export default function Carousel() {
     },
   ];
 
-  // useEffect(() => {
-  //   if (!isHovering) {
-  //     const interval = setInterval(() => {
-  //       setCurrent(current + 1);
-  //       if (current === slides.length - 1) {
-  //         setCurrent(0);
-  //       } else setCurrent(current + 1);
-  //     }, 1500);
-  //     return () => clearInterval(interval);
-  //   }
-  // }, [slides.length, current, isHovering]);
+  useEffect(() => {
+    if (!isHovering) {
+      const interval = setInterval(() => {
+        setCurrent(current + 1);
+        if (current === slides.length - 1) {
+          setCurrent(0);
+        } else setCurrent(current + 1);
+      }, 1500);
+      return () => clearInterval(interval);
+    }
+  }, [slides.length, current, isHovering]);
 
   return (
     <>
@@ -134,7 +134,7 @@ export default function Carousel() {
       <div className="flex justify-center items-center w-[100%] m-auto h-3/4">
         <div className="overflow-hidden relative w-auto h-full -mt-14">
           <div
-            className="flex h-full w-[100%] m-auto gap-4"
+            className="flex h-full w-full"
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           >
@@ -149,7 +149,7 @@ export default function Carousel() {
                   zIndex: "30",
                 }}
               >
-                <div className="items-icon flex flex-col justify-center items-center  px-10">
+                <div className="items-icon flex flex-col justify-center items-center">
                   <Link href={s.href} target="_blank">
                     <Image
                       src={s.image}
