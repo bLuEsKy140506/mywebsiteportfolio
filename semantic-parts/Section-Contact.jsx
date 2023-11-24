@@ -49,7 +49,7 @@ const SectionContact = () => {
             />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/earl-butlay-80a48426b/"
+            href="https://www.linkedin.com/in/earlbutlay/"
             target="_blank"
           >
             {" "}
