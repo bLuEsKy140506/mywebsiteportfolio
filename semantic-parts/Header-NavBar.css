@@ -40,14 +40,17 @@
 .active {
   color: rgb(0, 250, 250);
   font-weight: 800;
+  transition: all 0.7s ease;
 }
 
 .show {
   display: block;
+  transition: all 0.7s ease;
 }
 
 .hide {
   display: none;
+  transition: all 0.7s ease;
 }
 
 .active-logo {
@@ -63,6 +66,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    align-items: center;
     padding: 3vw 4vw;
   }
 

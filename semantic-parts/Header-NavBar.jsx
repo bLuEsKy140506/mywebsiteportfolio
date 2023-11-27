@@ -76,27 +76,27 @@ const HeaderNavBar = () => {
         </div>
       </div>
       <nav className="nav-container">
-        <Link href="#projects" className="flex gap-2">
+        <Link href="#projects" className="flex gap-2 items-center">
           <span>
-            <Image src={project} alt="project-icon" width={25} height={25} />
+            <Image src={project} alt="project-icon" width={35} height={35} />
           </span>
           <span className={activeLink === "projects" ? "active show" : "hide"}>
-            Project
+            Projects
           </span>
         </Link>
 
-        <Link href="#about" className="flex gap-2">
+        <Link href="#about" className="flex gap-2 items-center">
           <span>
-            <Image src={profile} alt="about-icon" width={25} height={25} />
+            <Image src={profile} alt="about-icon" width={35} height={35} />
           </span>
           <span className={activeLink === "about" ? "active show" : "hide"}>
             About
           </span>
         </Link>
 
-        <Link href="#contact" className="flex gap-2">
+        <Link href="#contact" className="flex gap-2 items-center">
           <span>
-            <Image src={contact} alt="about-icon" width={25} height={25} />
+            <Image src={contact} alt="about-icon" width={35} height={35} />
           </span>
           <span className={activeLink === "contact" ? "active show" : "hide"}>
             Contact
