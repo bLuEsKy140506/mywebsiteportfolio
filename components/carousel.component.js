@@ -131,7 +131,7 @@ export default function Carousel() {
   return (
     <>
       <p className="text-center text-2xl mt-20 pt-10">MY BOOTCAMP PROJECTS</p>
-      <div className="flex justify-center items-center w-[100%] m-auto h-4/5">
+      <div className="flex justify-center items-center w-[100%] m-auto h-4/5 max-sm:-mb-18">
         <div className="overflow-hidden relative w-auto h-full -mt-14">
           <div
             className="flex h-full items-icon"
@@ -195,7 +195,7 @@ export default function Carousel() {
             ))}
             ;
           </div>
-          <div className="absolute bottom-0 h-full w-full justify-between items-center flex text-black px-10 max-sm:px-1 text-3xl">
+          <div className="absolute bottom-0 h-full w-full justify-between items-center flex text-black px-10 max-sm:px-1 text-3xl ">
             <button
               onClick={previousSlide}
               className="z-40 hover:text-gray-700"
@@ -206,7 +206,7 @@ export default function Carousel() {
               <BsFillArrowRightCircleFill />
             </button>
           </div>
-          <div className="absolute bottom-0 py-3 px-10 flex justify-center gap-3 w-full items-end">
+          <div className="absolute bottom-0 py-3 px-10 flex justify-center gap-3 w-full items-end max-sm:pb-10">
             {slides.map((item, index) => (
               <div
                 key={`${item.description}---description${Math.floor(

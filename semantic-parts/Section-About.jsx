@@ -14,7 +14,7 @@ const arvo = Arvo({
 const SectionAbout = () => {
   return (
     <>
-      <div className="img-container max-sm:w-1/2">
+      <div className="img-container max-sm:w-1/3">
         <Image
           src={avatar}
           className="avatar "

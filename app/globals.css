@@ -131,7 +131,7 @@ section {
 
   .about-me,
   .contact-me {
-    gap: 1rem;
+    gap: 0.5rem;
     padding: 3rem 0;
   }
 }
