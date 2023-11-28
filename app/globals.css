@@ -128,4 +128,30 @@ section {
     justify-content: space-around;
     gap: 2vw;
   }
+
+  .about-me,
+  .contact-me {
+    gap: 1rem;
+    padding: 3rem 0;
+  }
 }
+
+/* @media only screen and (max-width: 640px) {
+  .landing-page-container {
+    margin-left: 0;
+    width: 100vw;
+  }
+
+  .project-icon-container {
+    width: 100%;
+    display: flex;
+
+    justify-content: space-around;
+    gap: 2vw;
+  }
+
+  .about-me,
+  .contact-me {
+    gap: 1rem;
+  }
+} */

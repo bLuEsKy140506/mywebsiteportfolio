@@ -130,7 +130,7 @@ export default function Carousel() {
 
   return (
     <>
-      <p className="text-center text-2xl mt-10">MY BOOTCAMP PROJECTS</p>
+      <p className="text-center text-2xl mt-20 pt-10">MY BOOTCAMP PROJECTS</p>
       <div className="flex justify-center items-center w-[100%] m-auto h-4/5">
         <div className="overflow-hidden relative w-auto h-full -mt-14">
           <div
