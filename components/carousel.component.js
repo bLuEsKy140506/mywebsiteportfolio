@@ -132,7 +132,7 @@ export default function Carousel() {
     <>
       <p className="text-center text-2xl mt-20 pt-10">MY BOOTCAMP PROJECTS</p>
       <div className="flex justify-center items-center w-[100%] m-auto h-4/5 max-sm:-mb-18">
-        <div className="overflow-hidden relative w-auto h-full -mt-14">
+        <div className="overflow-hidden relative w-auto h-full max-sm:-mt-14">
           <div
             className="flex h-full items-icon"
             onMouseOver={handleMouseOver}
