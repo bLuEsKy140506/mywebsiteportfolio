@@ -130,7 +130,9 @@ export default function Carousel() {
 
   return (
     <>
-      <p className="text-center text-2xl mt-20 pt-10">MY BOOTCAMP PROJECTS</p>
+      <p className="text-center text-2xl mt-10 pt-5 max-sm:mt-20 max-sm:pt-10">
+        MY BOOTCAMP PROJECTS
+      </p>
       <div className="flex justify-center items-center w-[100%] m-auto h-4/5 max-sm:-mb-18">
         <div className="overflow-hidden relative w-auto h-full max-sm:-mt-14">
           <div
@@ -177,7 +179,7 @@ export default function Carousel() {
                         />
                       ))}
                     </figure>
-                    <p className="flex justify-center gap-4 mb-4">
+                    <p className="flex justify-center gap-4 mb-6 max-sm:mb-4">
                       <Link href={s.href} target="_blank">
                         <button className="z-50 bg-teal-500 hover:bg-teal-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 hover:border-white rounded-full shadow max-sm:text-sm">
                           Live Demo
